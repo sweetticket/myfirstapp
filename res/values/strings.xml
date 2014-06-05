@@ -6,7 +6,7 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_display_message">My Message</string>
     
-    <string name="calc_input"> </string>
+    <string name="calc_input"></string>
     <string name="clear">c</string>
     <string name="add">+</string>
     <string name="subtract">-</string>

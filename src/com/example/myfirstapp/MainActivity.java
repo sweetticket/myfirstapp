@@ -10,10 +10,15 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.os.Build;
 
 public class MainActivity extends ActionBarActivity {
+	
+	private String preinput = "";
+	private EditText textbox = (EditText)findViewById(R.id.calc_input);
+
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,5 +68,29 @@ public class MainActivity extends ActionBarActivity {
             return rootView;
         }
     }
+    
+    /**
+     * Displays the digit clicked in text box. If digits are already displayed in the text box,
+     * add the digit to the end of the pre-displayed input.
+     */
+    public void displayDigit(View view) {
+    	if (preinput.length() < 10 ){
+    	Button b = (Button)view;
+    	String new_digit = b.getText().toString();
+    	String display_num = preinput + new_digit;
+    	preinput = display_num;
+    	textbox.setText(preinput);
+    	}
+    }
+    
+    /**
+     * Clears preinput.
+     */
+    public void clearInput(View view){
+    	preinput = "";
+    	textbox.setText(preinput);
+    }
+    
+     
 
 }
