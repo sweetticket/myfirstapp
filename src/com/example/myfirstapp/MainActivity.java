@@ -17,7 +17,6 @@ import android.os.Build;
 public class MainActivity extends ActionBarActivity {
 	
 	private String preinput = "";
-	private EditText textbox = (EditText)findViewById(R.id.calc_input);
 
 	
     @Override
@@ -79,6 +78,7 @@ public class MainActivity extends ActionBarActivity {
     	String new_digit = b.getText().toString();
     	String display_num = preinput + new_digit;
     	preinput = display_num;
+    	EditText textbox = (EditText)findViewById(R.id.calc_input);
     	textbox.setText(preinput);
     	}
     }
@@ -88,7 +88,9 @@ public class MainActivity extends ActionBarActivity {
      */
     public void clearInput(View view){
     	preinput = "";
+    	EditText textbox = (EditText)findViewById(R.id.calc_input);
     	textbox.setText(preinput);
+    	
     }
     
      
