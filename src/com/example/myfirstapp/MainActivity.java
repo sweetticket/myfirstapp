@@ -93,6 +93,18 @@ public class MainActivity extends ActionBarActivity {
     	
     }
     
-     
-
+    /**
+     * Changes sign of preinput
+     */
+    public void changeSigns(View view){
+    	if (preinput.length() > 0){
+    		if (preinput.substring(0, 1).equals("-")) {
+    			preinput = preinput.substring(1);
+    		}else {
+    			preinput = "-" + preinput;
+    			}
+    		EditText textbox = (EditText)findViewById(R.id.calc_input);
+    		textbox.setText(preinput);
+    	}
+    }
 }
