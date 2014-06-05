@@ -21,12 +21,14 @@
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="@string/add" />
+            android:text="@string/add"
+            android:onClick="setOp" />
         <Button
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="@string/subtract" />
+            android:text="@string/subtract"
+            android:onClick="setOp" />
 
         <Button
             android:layout_width="0dp"
@@ -40,7 +42,8 @@
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="@string/eq" />
+            android:text="@string/eq"
+            android:onClick="calculate" />
     </LinearLayout>
     
     <LinearLayout
